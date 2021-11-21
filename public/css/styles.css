@@ -1,0 +1,772 @@
+* {
+    margin: 0px; /*centra todo*/
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+    
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{
+    font-size: 12px;
+    text-align: center;
+}
+
+div.top-header
+{
+    background-color: #EAC926;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.copy-header{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-navbar
+{
+    display: none;
+}
+
+header{
+    background-color: #EAC926;
+}
+
+.logoxd, .form
+{
+    width: 26%;
+}
+
+.logo{
+    padding: 10px;
+    animation: agrandar 1s linear infinite alternate;
+}
+
+/*animacion---*/
+@keyframes agrandar {
+    0%{
+        transform:scale(1);
+    }
+
+    100%{
+        transform:scale(1.1);
+    }
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+}
+
+.main-navbar{
+    font-size: 12px;
+    margin-left: 20px;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none; /*estilo al borde*/
+    color: #666;
+    padding: 2px;
+}
+
+.form .submit{
+    
+    color: #666;
+    width: 10%;
+}
+
+.hamburger-button{
+    display: block; /*porque etiqueta a no es de tipo bloque para centrar el contenido*/
+    text-align: center;
+}
+
+.hamburger-button i{
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    height: 40px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+    width: 40px;
+}
+
+.last-visit,
+.offers{       /*hace que los articulos se vean en horizontal y caigan si superan el tamaño*/
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.price{
+    font-size: 18px;
+    width: 30%;
+}
+
+.discount{
+    width: 70%;
+}
+
+.discount,
+.description{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description{
+    color: #666;
+}
+
+.description{
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img{ /*porque la imagen hace lo que quiere y supera el ancho*/
+    width: 100%;
+}
+
+.main-navbar{
+    font-size: 16px;
+}
+main{
+    width: 90%;
+    margin: 0 auto; /*sin margen superior y centrado en horizontal en el body*/
+    
+    /*------display: flex; ----------- AGREGAR VERSION PC*/
+   
+}
+
+main section article{
+    background-color: #fff;    
+    margin: 10px 0px;
+}
+
+main section article img{
+    width: 100%; /*esto hace que la imagen no pase de su tamaño en el contenedor article y tambien si no existiera el tamaño del article se modificaria y no tomaria lo que le corresponde*/
+}
+
+article i,
+.discount{
+    color: #39b54a;
+}
+
+
+
+article i{
+    display: block; /*creo que i es elemento linea*/
+    font-size: 16px; /*aumenta el tamaño del carrito*/
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute; /*hace que no se reserve espacio en la memoria de una caja por lo que lo visual se va a sobreponer en otro elmento*/
+    right: 20px; /*si le indicamos esto, sale de su contenedor*/
+    top: -15px;
+}
+
+section h3{
+    margin: 20px 0px; /*arriba y abajo*/
+}
+
+.main-article{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    border-top: 1px solid #ebebeb;
+    position: relative; /*puede verse visualmente en otro lugar pero sigue conserva su espacio en la estructura*/
+    /*cuando esta en relative, esta posicionado. Lo que significa que todos sus elementos ubicados con absolute va a tomar como referencia este contenedor y no el viewport*/
+    
+    padding: 15px;
+}
+
+/*------------------FORMULARIOS----------------*/
+.form-control
+{
+    
+    background-color: rgb(241, 236, 236);
+    border-radius: 40px;
+    border: #666 3px solid;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 13px 0;
+    width: 86%;
+}
+
+.form-controler label
+{
+    display: block;
+}
+.form-controler
+{
+    padding: 0 20%;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+
+
+.control{
+    width: 100%;
+    padding: 0 7px;
+    border-radius: 30px;
+    transition: all 1s;
+}
+
+.buttonxd
+{
+    display: flex;
+    justify-content: center;
+}
+
+.boton-formulario
+{
+    font-size: 19px;
+    padding: 1px 13px;
+    background-color: lightblue;
+}
+
+.titulos
+{
+    font-weight: bold;
+    width: 100%; /*borrar si explota*/
+}
+
+
+.boton-formulario-enviar:hover
+{
+    background-color: #000000;
+    color: #fff;
+}
+
+
+/*-------FOOTER----------------*/
+
+footer {
+    padding: 19px;
+}
+
+.footer-cont
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+    padding: 0 20px;
+    margin-top: 15px;
+}
+
+.contenedor-foot
+{
+    width: 31%;
+}
+
+.h2text
+{
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 11px;
+}
+
+.copyright
+{
+    
+}
+
+.icon i
+{
+    font-size: 35px;
+    color: #4067f5;
+    transition: color 1s;
+}
+.icon
+{
+    text-align: center;
+    margin-bottom: 11px;
+    
+}
+
+.icon:hover i
+{
+    color: #EAC926;
+}
+
+footer{
+    padding: 12px;
+}
+
+main {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.form-control {
+    background-color: rgb(246, 255, 161);
+    border-radius: 40px;
+    border: #666 3px solid;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 13px 0;
+    width: 100%;
+}
+
+form {
+    width: 100%;
+}
+
+.form-controler, .form-controlerna {
+    padding: 0 20%;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boton-formulario-enviar
+{
+    width: 19%;
+    background-color: lightblue;
+    transition: all 1s  ;
+}
+
+.form .submit i {
+   
+}
+
+/*nuevo------------*/
+
+div.top-header {
+    background-color: #EAC926;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logoxd, .form {
+    width: 41%;
+    margin: auto;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    padding: 0px;
+    font-size: 11px;
+    width: 100%;
+}
+
+.form .input {
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    position: relative;
+    width: 100%;
+    border-radius: 7px;
+}
+
+.busquedaxd {
+    font-size: 15px;
+    text-align: left;
+}
+
+.form .submit {
+    color: #666;
+    width: 5%;
+    position: absolute;
+    /* border: 1px solid red; */
+    top: 3px;
+    right: 9px;
+}
+
+.form .submit i {
+    font-size: 15px;
+}
+
+.form .submit i {
+    
+}
+
+.copy-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    
+    font-size: 14px;
+}
+
+
+
+@media (min-width: 361px){
+    
+    .description
+    {
+        display: block; /*es para que aparezca nada mas :V */
+    }
+
+    /*nuevo codigo*/
+    .copy-header{
+        max-width: 350px;
+        text-align: right;
+        
+    }
+    .hamburger-button
+    {
+        display: none;
+    }
+    .main-navbar
+    {
+        
+        display: flex; /*cada ul estara separado*/
+        justify-content: space-between;
+        margin: 0px;
+        font-size: 10.5px;
+    }
+    
+
+    .main-navbar ul
+    {
+        display: flex; /*hacemos que el contenido de la ul se vea en horizontal*/
+    }
+
+    .main-navbar li
+    {
+        margin: 0 5px; /*arriba/abajo    izq/der*/
+    }
+
+    .main-navbar{
+        margin: 0;
+    }
+
+    /*------------------*/
+
+    main section article{
+        /*box-shadow: 0px 0px 10px rgb(100, 100, 100);*/ /* izq/derecha - arriba/abajo - opacidad*/
+    }
+
+    .products{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .products article{
+        width: 45%; /*ancho clave para que me quede en formato de 2 elementos o articulos*/
+    }
+
+    .price,
+    .discount{
+        width: 50%;
+        text-align: left;
+    }
+
+
+    /*nuevooooo*/
+    
+    div.top-header {
+        background-color: #EAC926;
+        padding: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        
+        justify-content: space-between;
+    }
+
+    .copy-header {
+    text-align: right;
+    width: 26%;
+    font-size: 15px;
+    align-self: center;
+}
+
+    .form {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        font-size: 11px;
+        width: 33%;
+        height: 59px;
+    }
+
+    .form .input {
+        background-color: #FFF;
+        border: 1px solid #000;
+        outline: none;
+        color: #666;
+        padding: 2px;
+        position: relative;
+        width: 100%;
+        height: 53%;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+    }
+
+    .busquedaxd {
+        font-size: 11px;
+        text-align: left;
+    }
+
+    .form .submit {
+        color: #666;
+        width: 7%;
+        position: absolute;
+        top: 7px;
+        right: 3px;
+    }
+
+    .form .submit i{
+        width: 100%;
+        font-size: 9px;
+    }
+    
+}   
+
+@media (min-width: 769px){
+    main section div.products article{
+        width: 22%;
+    }
+        /*nuevo codigo*/
+        .top-header, .main-navbar
+    {
+        max-width: 1200px;
+        
+        margin: auto; /*porque queremos mover todo al centro y no cada elemetno*/
+    }
+
+
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.description
+{
+    position: absolute;
+    left: -8%;
+    opacity: 0;
+    transition: all 1s;
+    
+}
+
+.busquedaxd
+{
+
+}
+
+article{
+    transition: all 1s;
+}
+
+
+article:hover .description
+{
+    position: relative;
+    left: 0;
+    opacity: 1;
+    
+}
+
+article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+article .main-article i
+{
+    transition: transform 1s;
+}
+
+article:hover .main-article i
+{
+    transform: rotate(-90deg)
+}
+
+.main-navbar a
+    {
+        font-size: 19px;
+    }
+
+
+.icon:hover i
+    {
+        color: #EAC926;
+    }
+
+
+
+/*----------modificando el header----*/
+.logoxd, .form, .copy-header {
+    width: 33%;
+}
+.form {
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    font-size: 11px;
+    width: 33%;
+    justify-content: center;
+    height: 100px;
+}
+
+
+.form .input {
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+    width: 86%;
+    height: 46%;
+    border-radius: 15px;
+    position: relative;
+    align-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.busquedaxd {
+    text-align: left;
+    font-size: 16px;
+}
+
+
+
+.copy-header {
+    /* max-width: 350px; */
+    text-align: right;
+    width: 33%;
+    font-size: 9px;
+    margin: auto;
+}
+
+
+        /*----------*/
+    
+
+
+/*register------------*/
+main {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 70px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.form-control {
+    background-color: rgb(249 253 207);
+    border-radius: 40px;
+    border: #666 3px solid;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 13px 0;
+    width: 58%;
+}
+
+.form-controlerna {
+    padding: 0 20%;
+    width: 100%;
+    margin-bottom: 15px;
+    
+}
+
+/*nuevo*/
+
+.logoxd, .form, .copy-header {
+    width: 33%;
+}
+.form .submit {
+    color: #666;
+    width: 6%;
+    position: absolute;
+    top: 14px;
+    right: 5px;
+}
+
+
+
+/*con esto no se romp------------*/
+.logoxd, .form, .copy-header {
+    width: 33%;
+}
+
+.busquedaxd {
+    text-align: left;
+    font-size: 16px;
+}
+.form .submit {
+    color: #666;
+    width: 10%;
+}
+
+.form .submit i
+{
+width: 100%;
+position: static;
+font-size: 15px;
+}
+
+
+
+.copy-header {
+    /* max-width: 350px; */
+    text-align: right;
+    width: 33%;
+    margin: auto;
+    font-size: 27px;
+}
+
+div.top-header {
+    background-color: #EAC926;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/*transiciones-----------*/
+.control:hover
+{
+    background-color: rgb(52, 53, 54);
+    color: #fff;
+}
+}
