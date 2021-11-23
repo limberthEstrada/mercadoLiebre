@@ -41,6 +41,7 @@ div.top-header
 
 header{
     background-color: #EAC926;
+    padding-bottom: 15px;
 }
 
 .logoxd, .form
@@ -428,7 +429,10 @@ div.top-header {
     font-size: 14px;
 }
 
-
+#cancelar-button
+{
+    background-color: rgb(255, 161, 161);
+}
 
 @media (min-width: 361px){
     
@@ -580,8 +584,8 @@ main{
 
 .description
 {
-    position: absolute;
-    left: -8%;
+    /*position: absolute;*/
+    /*left: -8%;*/
     opacity: 0;
     transition: all 1s;
     
@@ -593,9 +597,24 @@ main{
 }
 
 article{
+    
     transition: all 1s;
 }
 
+.main-article
+{
+    height: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+article
+{
+    transition: all 1s;
+}
+article:hover
+{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
 
 article:hover .description
 {
@@ -605,8 +624,10 @@ article:hover .description
     
 }
 
-article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+article:hover .main-article{
+    
+    /*nuevo*/
+    height: 101px;
 }
 
 article .main-article i
@@ -616,7 +637,8 @@ article .main-article i
 
 article:hover .main-article i
 {
-    transform: rotate(-90deg)
+    box-shadow: 0px 0px 10px #39b54a;
+    transform: rotateY(180deg)
 }
 
 .main-navbar a
